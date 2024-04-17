@@ -12,7 +12,7 @@
   <title>Manual</title>
 </head>
 
-<body>
+<body>  
   <div id="menu-lateral">
     <div id="abrir-menu">
       <span class="material-symbols-outlined menu1">menu</span>
@@ -27,7 +27,7 @@
           </div>
         </li>
         <li>
-          <div id="filtro" class="nova-pagina">
+          <div id="filtros" class="nova-pagina">
             <img src="src/filter.png" alt="" class="link-imagem">
             <p class="link-paragrafo">Filtros</p>
           </div>
@@ -60,8 +60,6 @@
     </div><!--opcoes-menu-->
   </div><!--menu-lateral-->
   <div id="main-principal">
-
-
     <div id="menu-superior">
       <img src="src/home.png" alt="" class="link-imagem" id="icone">
       <h1 id="texto-superior">Início</h1>
@@ -70,141 +68,68 @@
         <img src="src/dark.png" alt="" class="dark-img">
         <img src="src/light.png" alt="" class="light-img conteudo-oculto">
       </div>
-    </div>
+    </div><!--menu-superior-->
+    <div class="cabecalho-conteudo-filtro conteudo-oculto">
+      <input type="text" id="filtro" >
+      <button id="filtro-pesquisar" class="btn-pesquisar">Pesquisar</button>    
+    </div><!--cabecalho-conteudo-filtro-->
+    <div class="cabecalho-conteudo-relatorio conteudo-oculto">
+        <input type="text" id="relatorio">
+        <button id="relatorio-pesquisar" class="btn-pesquisar">Pesquisar</button> 
+    </div><!--cabecalho-conteudo-relatorio-->
+    <div class="cabecalho-conteudo-task conteudo-oculto">
+      <div id="task-maes" class="tasks">
+        <h3>Mães</h3>
+      </div>
+      <div id="task-namorados" class="tasks">
+        <h3>Namorados</h3>
+      </div>
+      <div id="task-pais" class="tasks">
+        <h3>Pais</h3>
+      </div>
+      <div id="task-natal" class="tasks">
+        <h3>Natal</h3>
+      </div>
+    </div><!--cabecalho-conteudo-task-->
+    <div class="cabecalho-conteudo-termo conteudo-oculto">
+      <div id="termo-crmall" class="termos">
+        <h3>Padrão CRMall</h3>
+      </div>
+      <div id="termo-multi" class="termos">
+        <h3>Padrão Multiplan</h3>
+      </div>
+    </div><!--cabecalho-conteudo-termo-->
     <div id="main-conteudo">
-      <div class="conteudo-filtro conteudo-oculto">
-        <div class="cabecalho-conteudo-filtro conteudo-oculto">
-          <div id="filtro-maes" class="filtros">
-            <h3>Mães</h3>
-          </div>
-          <div id="filtro-namorados" class="filtros">
-            <h3>Namorados</h3>
-          </div>
-          <div id="filtro-pais" class="filtros">
-            <h3>Pais</h3>
-          </div>
-          <div id="filtro-natal" class="filtros">
-            <h3>Natal</h3>
-          </div>
-        </div><!--cabecalho-conteudo-filtro-->
-        <div class="corpo-conteudo-filtro conteudo-oculto">
-          <div id="filtros-maes" class="organiza-texto conteudo-oculto">
-            <p class="desc-filtro">2024 - Mães (Loteria)</p>
-            <p class="desc-filtro">2024 - Mães (Prêmio)</p>
-            <p class="desc-filtro">2024 - Mães (Cupom)</p>
-            <p class="desc-filtro">2024 - Mães (Funcionários)</p>
-            <p class="desc-filtro">2024 - Mães (Cupom + Prêmio)</p>
-            <p class="desc-filtro">2024 - Mães (Loteria + Prêmio)</p>
-            <p class="desc-filtro">2024 - Mães (Transações)</p>
-            <p class="desc-filtro">2024 - Mães (Benefícios)</p>
-            <p class="desc-filtro">2024 - Mães (Lojas Participantes)</p>
-          </div>
-          <div id="filtros-namorados" class="organiza-texto conteudo-oculto">
-            <p class="desc-filtro">2024 - Namorados (Loteria)</p>
-            <p class="desc-filtro">2024 - Namorados (Prêmio)</p>
-            <p class="desc-filtro">2024 - Namorados (Cupom)</p>
-            <p class="desc-filtro">2024 - Namorados (Funcionários)</p>
-            <p class="desc-filtro">2024 - Namorados (Cupom + Prêmio)</p>
-            <p class="desc-filtro">2024 - Namorados (Loteria + Prêmio)</p>
-            <p class="desc-filtro">2024 - Namorados (Transações)</p>
-            <p class="desc-filtro">2024 - Namorados (Benefícios)</p>
-            <p class="desc-filtro">2024 - Namorados (Lojas Participantes)</p>
-          </div>
-          <div id="filtros-pais" class="organiza-texto conteudo-oculto">
-            <p class="desc-filtro">2024 - Pais (Loteria)</p>
-            <p class="desc-filtro">2024 - Pais (Prêmio)</p>
-            <p class="desc-filtro">2024 - Pais (Cupom)</p>
-            <p class="desc-filtro">2024 - Pais (Funcionários)</p>
-            <p class="desc-filtro">2024 - Pais (Cupom + Prêmio)</p>
-            <p class="desc-filtro">2024 - Pais (Loteria + Prêmio)</p>
-            <p class="desc-filtro">2024 - Pais (Transações)</p>
-            <p class="desc-filtro">2024 - Pais (Benefícios)</p>
-            <p class="desc-filtro">2024 - Pais (Lojas Participantes)</p>
-          </div>
-          <div id="filtros-natal" class="organiza-texto conteudo-oculto">
-            <p class="desc-filtro">2024 - Natal (Loteria)</p>
-            <p class="desc-filtro">2024 - Natal (Prêmio)</p>
-            <p class="desc-filtro">2024 - Natal (Cupom)</p>
-            <p class="desc-filtro">2024 - Natal (Funcionários)</p>
-            <p class="desc-filtro">2024 - Natal (Cupom + Prêmio)</p>
-            <p class="desc-filtro">2024 - Natal (Loteria + Prêmio)</p>
-            <p class="desc-filtro">2024 - Natal (Transações)</p>
-            <p class="desc-filtro">2024 - Natal (Benefícios)</p>
-            <p class="desc-filtro">2024 - Natal (Lojas Participantes)</p>
-          </div>
+         
+      <div class="conteudo-filtro">        
+        <div class="corpo-conteudo-filtro">
+          <div id="filtrosDesc" class="organiza-texto conteudo-oculto">
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Loteria)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Prêmio)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Cupom)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Funcionários)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Cupom + Prêmio)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Loteria + Prêmio)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Transações)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Benefícios)</p>
+            <p class="desc-filtro">2024 - <span class="desc-filtro-pesquisa"></span> (Lojas Participantes)</p>
+          </div><!--filtrosDesc-->
         </div><!--corpo-conteudo-filtro-->
       </div><!--conteudo-filtro-->
-
-      <div class="conteudo-relatorio conteudo-oculto">
-        <div class="cabecalho-conteudo-relatorio conteudo-oculto">
-          <div id="relatorio-maes" class="relatorios">
-            <h3>Mães</h3>
-          </div>
-          <div id="relatorio-namorados" class="relatorios">
-            <h3>Namorados</h3>
-          </div>
-          <div id="relatorio-pais" class="relatorios">
-            <h3>Pais</h3>
-          </div>
-          <div id="relatorio-natal" class="relatorios">
-            <h3>Natal</h3>
-          </div>
-        </div><!--cabecalho-conteudo-relatorio-->
-        <div class="corpo-conteudo-relatorio conteudo-oculto">
-          <div id="relatorios-maes" class="organiza-texto conteudo-oculto">
-            <p class="desc-relatorio">2024 - Mães (Resumo de Campanha)</p>
-            <p class="desc-relatorio">2024 - Mães (Gerados e Não Retirados)</p>
-            <p class="desc-relatorio">2024 - Mães (Enquete)</p>
-            <p class="desc-relatorio">2024 - Mães (Avaliação de Lojas)</p>
-            <p class="desc-relatorio">2024 - Mães (Expiração de Brinde)</p>
-            <p class="desc-relatorio">2024 - Mães (SPA - Números da Sorte)</p>
-            <p class="desc-relatorio">2024 - Mães (Possível Ganhador)</p>
-          </div>
-          <div id="relatorios-namorados" class="organiza-texto conteudo-oculto">
-            <p class="desc-relatorio">2024 - Namorados (Resumo de Campanha)</p>
-            <p class="desc-relatorio">2024 - Namorados (Gerados e Não Retirados)</p>
-            <p class="desc-relatorio">2024 - Namorados (Enquete)</p>
-            <p class="desc-relatorio">2024 - Namorados (Avaliação de Lojas)</p>
-            <p class="desc-relatorio">2024 - Namorados (Expiração de Brinde)</p>
-            <p class="desc-relatorio">2024 - Namorados (SPA - Números da Sorte)</p>
-            <p class="desc-relatorio">2024 - Namorados (Possível Ganhador)</p>
-          </div>
-          <div id="relatorios-pais" class="organiza-texto conteudo-oculto">
-            <p class="desc-relatorio">2024 - Pais (Resumo de Campanha)</p>
-            <p class="desc-relatorio">2024 - Pais (Gerados e Não Retirados)</p>
-            <p class="desc-relatorio">2024 - Pais (Enquete)</p>
-            <p class="desc-relatorio">2024 - Pais (Avaliação de Lojas)</p>
-            <p class="desc-relatorio">2024 - Pais (Expiração de Brinde)</p>
-            <p class="desc-relatorio">2024 - Pais (SPA - Números da Sorte)</p>
-            <p class="desc-relatorio">2024 - Pais (Possível Ganhador)</p>
-          </div>
-          <div id="relatorios-natal" class="organiza-texto conteudo-oculto">
-            <p class="desc-relatorio">2024 - Natal (Resumo de Campanha)</p>
-            <p class="desc-relatorio">2024 - Natal (Gerados e Não Retirados)</p>
-            <p class="desc-relatorio">2024 - Natal (Enquete)</p>
-            <p class="desc-relatorio">2024 - Natal (Avaliação de Lojas)</p>
-            <p class="desc-relatorio">2024 - Natal (Expiração de Brinde)</p>
-            <p class="desc-relatorio">2024 - Natal (SPA - Números da Sorte)</p>
-            <p class="desc-relatorio">2024 - Natal (Possível Ganhador)</p>
+      <div class="conteudo-relatorio">        
+        <div class="corpo-conteudo-relatorio">          
+          <div id="relatoriosDesc" class="organiza-texto conteudo-oculto">
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Resumo de Campanha)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Gerados e Não Retirados)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Enquete)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Avaliação de Lojas)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Expiração de Brinde)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (SPA - Números da Sorte)</p>
+            <p class="desc-relatorio">2024 - <span class="desc-relatorio-pesquisa"></span> (Possível Ganhador)</p>
           </div>
         </div><!--corpo-conteudo-relatorio-->
       </div><!--conteudo-relatorio-->
-
-      <div class="conteudo-task conteudo-oculto">
-        <div class="cabecalho-conteudo-task conteudo-oculto">
-          <div id="task-maes" class="tasks">
-            <h3>Mães</h3>
-          </div>
-          <div id="task-namorados" class="tasks">
-            <h3>Namorados</h3>
-          </div>
-          <div id="task-pais" class="tasks">
-            <h3>Pais</h3>
-          </div>
-          <div id="task-natal" class="tasks">
-            <h3>Natal</h3>
-          </div>
-        </div><!--cabecalho-conteudo-task-->
+      <div class="conteudo-task conteudo-oculto">        
         <div class="corpo-conteudo-task conteudo-oculto">
           <div id="tasks-maes" class="organiza-texto conteudo-oculto">
             <p class="desc-task">2024 - Mães (Geração Automática de Prêmios)</p>
@@ -232,7 +157,6 @@
           </div>
         </div><!--corpo-conteudo-relatorio-->
       </div><!--conteudo-task-->
-
       <div class="conteudo-campanha conteudo-oculto">
         <div class="corpo-conteudo-campanha conteudo-oculto">
           <div id="campanha" class="organiza-texto conteudo-oculto">
@@ -250,18 +174,20 @@
           </div>
         </div><!--corpo-conteudo-campanha-->
       </div><!--conteudo-campanha-->
-
       <div class="conteudo-termo conteudo-oculto">
         <div class="corpo-conteudo-termo conteudo-oculto">
-          <div id="termo" class="organiza-texto conteudo-oculto">
+          <div id="termos-crmall" class="organiza-texto conteudo-oculto">
             <p class="desc-termo">Li e concordo com os termos e condições da campanha, ciente de que ao aceitar, estou aderindo aos termos e regulamentos apresentados no link. (Obrigatório)</p>
             <p class="desc-termo">Aceito receber informativos, promoções em geral e/ou ofertas de serviço ou produtos das empresas aderentes, de forma personalizada ou não, via e-mail, WhatsApp, telefone ou SMS. (Marketing)</p>
           </div>
+          <div id="termos-multi" class="organiza-texto conteudo-oculto">
+            <p class="desc-termo">Aceita os termos do presente Regulamento.</p>
+            <p class="desc-termo">Adere a este Regulamento (contrato de adesão), ciente de que a Promotora coletará e utilizará, sem qualquer ônus, os seus dados pessoais inseridos no cadastro para formação de banco de dados, visando analisar as participações havidas nesta promoção; controlar e efetuar a distribuição dos brindes; efetuar contato e/ou enviar lhe informativos sobre esta promoção pelos meios disponibilizados no ato do cadastro: e-mail, SMS, WhatsApp, telefone; prestar contas à Secretaria de Prêmios e Apostas do Ministério da Fazenda - SPA/MF, e compartilhar os dados com empresas contratadas pelas Promotoras com a finalidade exclusiva de executar esta promoção e, para fins de Marketing, conforme detalhadamente explicado na Política de Privacidade anexa ao presente Regulamento.</p>
+          </div>
         </div><!--corpo-conteudo-campanha-->
-      </div><!--conteudo-campanha-->
-
+      </div><!--conteudo-termo-->
     </div><!--main-conteudo-->
-  </div>
+  </div><!--main-principal-->
   </div>
 </body>
 

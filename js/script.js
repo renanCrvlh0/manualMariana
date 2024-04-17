@@ -16,11 +16,13 @@ window.onload = () => {
     let icone = document.querySelector('#icone');
 
     const inicio = document.querySelector('#inicio');
-    const filtro = document.querySelector('#filtro');
+    const filtro = document.querySelector('#filtros');
     const relatorios = document.querySelector('#relatorios');
     const tasks = document.querySelector('#tasks');
     const configCampanha = document.querySelector('#config-campanha');
     const termos = document.querySelector('#termos');
+
+    const filtros = document.querySelectorAll('.filtros');
 
       //FILTROS
 
@@ -95,12 +97,17 @@ window.onload = () => {
       //TERMO
 
     let conteudoTermo = document.querySelector('.conteudo-termo');
+    let conteudoCabecalhoTermo = document.querySelector('.cabecalho-conteudo-termo');
     let corpoConteudoTermo = document.querySelector('.corpo-conteudo-termo');
 
-    let termo = document.querySelector('#termo');
+    let termoCrmall = document.querySelector('#termo-crmall');
+    let termosCrmall = document.querySelector('#termos-crmall');
+
+    let termoMulti = document.querySelector('#termo-multi');
+    let termosMulti = document.querySelector('#termos-multi');
+
 
       //TERMO
-
     
 
     // VARIÁVEIS E CONSTANTES
@@ -147,6 +154,7 @@ window.onload = () => {
       corpoConteudoCampanha.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.add('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.add('conteudo-oculto');
       corpoConteudoTermo.classList.add('conteudo-oculto');
 
       conteudoFiltro.classList.add('conteudo-oculto');
@@ -168,6 +176,7 @@ window.onload = () => {
       corpoConteudoCampanha.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.add('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.add('conteudo-oculto');
       corpoConteudoTermo.classList.add('conteudo-oculto');
 
       conteudoFiltro.classList.remove('conteudo-oculto');
@@ -189,6 +198,7 @@ window.onload = () => {
       corpoConteudoCampanha.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.add('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.add('conteudo-oculto');
       corpoConteudoTermo.classList.add('conteudo-oculto');
 
       conteudoRelatorio.classList.remove('conteudo-oculto');
@@ -210,6 +220,7 @@ window.onload = () => {
       corpoConteudoCampanha.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.add('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.add('conteudo-oculto');
       corpoConteudoTermo.classList.add('conteudo-oculto');
 
       conteudoTask.classList.remove('conteudo-oculto');
@@ -231,6 +242,7 @@ window.onload = () => {
       conteudoCabecalhoTask.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.add('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.add('conteudo-oculto');
       corpoConteudoTermo.classList.add('conteudo-oculto');
 
       conteudoCampanha.classList.remove('conteudo-oculto');
@@ -257,9 +269,37 @@ window.onload = () => {
       campanha.classList.add('conteudo-oculto');
 
       conteudoTermo.classList.remove('conteudo-oculto');
+      conteudoCabecalhoTermo.classList.remove('conteudo-oculto');
       corpoConteudoTermo.classList.remove('conteudo-oculto');
-      termo.classList.remove('conteudo-oculto');
+      // termo.classList.remove('conteudo-oculto');
     })
+
+    const btnPesquisa = document.querySelector('#filtro-pesquisar');
+    let mudaTexto = document.querySelector('#filtro');
+    const inputFiltros = document.querySelector('#filtrosDesc');
+    
+    let texto = document.querySelectorAll('.desc-filtro-pesquisa');
+
+    btnPesquisa.addEventListener('click', () => {      
+      texto.forEach((e) => {
+        e.innerHTML = mudaTexto.value;
+      })
+      inputFiltros.classList.remove('conteudo-oculto');
+      
+    })
+
+    const btnPesquisaRelatorio = document.querySelector('#relatorio-pesquisar');
+    let mudaTextoRelatorio = document.querySelector('#relatorio');
+    const inputRelatorios = document.querySelector('#relatoriosDesc');
+    
+    let textoRelatorio = document.querySelectorAll('.desc-relatorio-pesquisa');
+
+    btnPesquisaRelatorio.addEventListener('click', () => {      
+       textoRelatorio.forEach((e) => {
+         e.innerHTML = mudaTextoRelatorio.value;
+       })
+       inputRelatorios.classList.remove('conteudo-oculto');
+    });
 
     // FUNÇÕES GERAIS
 
@@ -267,98 +307,157 @@ window.onload = () => {
 
     // FUNÇÕES PARA OS FILTROS
 
-    filtroMaes.addEventListener('click', () => {
-      corpoConteudoFiltro.classList.remove('conteudo-oculto');
-      filtrosMaes.classList.remove('conteudo-oculto');
+    // filtroMaes.addEventListener('click', () => {      
 
-      if(!(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
-        filtrosNamorados.classList.add('conteudo-oculto');
-        filtrosPais.classList.add('conteudo-oculto');
-        filtrosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    //   corpoConteudoFiltro.classList.remove('conteudo-oculto');
+    //   filtrosMaes.classList.remove('conteudo-oculto');
 
-    filtroNamorados.addEventListener('click', () => {
-      corpoConteudoFiltro.classList.remove('conteudo-oculto');
-      filtrosNamorados.classList.remove('conteudo-oculto');
+    //   if(!(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
+    //     filtrosNamorados.classList.add('conteudo-oculto');
+    //     filtrosPais.classList.add('conteudo-oculto');
+    //     filtrosNatal.classList.add('conteudo-oculto');
+    //   }
 
-      if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
-        filtrosMaes.classList.add('conteudo-oculto');
-        filtrosPais.classList.add('conteudo-oculto');
-        filtrosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    //   if(!(filtroMaes.classList.contains('mudaCor'))){
+    //     filtroMaes.classList.add('mudaCor');
+    //     filtroNamorados.classList.remove('mudaCor');
+    //     filtroPais.classList.remove('mudaCor');
+    //     filtroNatal.classList.remove('mudaCor');
+    //   }
+    // })
 
-    filtroPais.addEventListener('click', () => {
-      corpoConteudoFiltro.classList.remove('conteudo-oculto');
-      filtrosPais.classList.remove('conteudo-oculto');
+    // filtroNamorados.addEventListener('click', () => {
 
-      if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
-        filtrosMaes.classList.add('conteudo-oculto');
-        filtrosNamorados.classList.add('conteudo-oculto');
-        filtrosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    //   corpoConteudoFiltro.classList.remove('conteudo-oculto');
+    //   filtrosNamorados.classList.remove('conteudo-oculto');
 
-    filtroNatal.addEventListener('click', () => {
-      corpoConteudoFiltro.classList.remove('conteudo-oculto');
-      filtrosNatal.classList.remove('conteudo-oculto');
+    //   if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
+    //     filtrosMaes.classList.add('conteudo-oculto');
+    //     filtrosPais.classList.add('conteudo-oculto');
+    //     filtrosNatal.classList.add('conteudo-oculto');
+    //   }
 
-      if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto'))){
-        filtrosMaes.classList.add('conteudo-oculto');
-        filtrosNamorados.classList.add('conteudo-oculto');
-        filtrosPais.classList.add('conteudo-oculto');
-      }
-    })
+    //   if(!(filtroNamorados.classList.contains('mudaCor'))){
+    //     filtroNamorados.classList.add('mudaCor');
+    //     filtroMaes.classList.remove('mudaCor');
+    //     filtroPais.classList.remove('mudaCor');
+    //     filtroNatal.classList.remove('mudaCor');
+    //   }
+    // })
+
+    // filtroPais.addEventListener('click', () => {
+    //   corpoConteudoFiltro.classList.remove('conteudo-oculto');
+    //   filtrosPais.classList.remove('conteudo-oculto');
+      
+
+    //   if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosNatal.classList.contains('conteudo-oculto'))){
+    //     filtrosMaes.classList.add('conteudo-oculto');
+    //     filtrosNamorados.classList.add('conteudo-oculto');
+    //     filtrosNatal.classList.add('conteudo-oculto');
+    //   }
+
+    //   if(!(filtroPais.classList.contains('mudaCor'))){
+    //     filtroPais.classList.add('mudaCor');
+    //     filtroMaes.classList.remove('mudaCor');
+    //     filtroNamorados.classList.remove('mudaCor');
+    //     filtroNatal.classList.remove('mudaCor');
+    //   }
+    // })
+
+    // filtroNatal.addEventListener('click', () => {
+    //   corpoConteudoFiltro.classList.remove('conteudo-oculto');
+    //   filtrosNatal.classList.remove('conteudo-oculto');
+
+    //   if(!(filtrosMaes.classList.contains('conteudo-oculto')) || !(filtrosNamorados.classList.contains('conteudo-oculto')) || !(filtrosPais.classList.contains('conteudo-oculto'))){
+    //     filtrosMaes.classList.add('conteudo-oculto');
+    //     filtrosNamorados.classList.add('conteudo-oculto');
+    //     filtrosPais.classList.add('conteudo-oculto');
+    //   }
+
+    //   if(!(filtroNatal.classList.contains('mudaCor'))){
+    //     filtroNatal.classList.add('mudaCor');
+    //     filtroMaes.classList.remove('mudaCor');
+    //     filtroNamorados.classList.remove('mudaCor');
+    //     filtroPais.classList.remove('mudaCor');
+    //   }
+    // })
 
     // FUNÇÕES PARA OS FILTROS
 
 
     // FUNÇÕES PARA OS RELATÓRIOS
 
-    relatorioMaes.addEventListener('click', () => {
-      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
-      relatoriosMaes.classList.remove('conteudo-oculto');
+    // relatorioMaes.addEventListener('click', () => {
+    //   corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+    //   relatoriosMaes.classList.remove('conteudo-oculto');
 
-      if(!(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
-        relatoriosNamorados.classList.add('conteudo-oculto');
-        relatoriosPais.classList.add('conteudo-oculto');
-        relatoriosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    //   if(!(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
+    //     relatoriosNamorados.classList.add('conteudo-oculto');
+    //     relatoriosPais.classList.add('conteudo-oculto');
+    //     relatoriosNatal.classList.add('conteudo-oculto');
+    //   }
 
-    relatorioNamorados.addEventListener('click', () => {
-      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
-      relatoriosNamorados.classList.remove('conteudo-oculto');
+    //   if(!(relatorioMaes.classList.contains('mudaCor'))){
+    //     relatorioMaes.classList.add('mudaCor');
+    //     relatorioNamorados.classList.remove('mudaCor');
+    //     relatorioPais.classList.remove('mudaCor');
+    //     relatorioNatal.classList.remove('mudaCor');
+    //   }
+    // })
 
-      if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
-        relatoriosMaes.classList.add('conteudo-oculto');
-        relatoriosPais.classList.add('conteudo-oculto');
-        relatoriosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    // relatorioNamorados.addEventListener('click', () => {
+    //   corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+    //   relatoriosNamorados.classList.remove('conteudo-oculto');
 
-    relatorioPais.addEventListener('click', () => {
-      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
-      relatoriosPais.classList.remove('conteudo-oculto');
+    //   if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
+    //     relatoriosMaes.classList.add('conteudo-oculto');
+    //     relatoriosPais.classList.add('conteudo-oculto');
+    //     relatoriosNatal.classList.add('conteudo-oculto');
+    //   }
 
-      if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
-        relatoriosMaes.classList.add('conteudo-oculto');
-        relatoriosNamorados.classList.add('conteudo-oculto');
-        relatoriosNatal.classList.add('conteudo-oculto');
-      }
-    })
+    //   if(!(relatorioNamorados.classList.contains('mudaCor'))){
+    //     relatorioNamorados.classList.add('mudaCor');
+    //     relatorioMaes.classList.remove('mudaCor');
+    //     relatorioPais.classList.remove('mudaCor');
+    //     relatorioNatal.classList.remove('mudaCor');
+    //   }
+    // })
 
-    relatorioNatal.addEventListener('click', () => {
-      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
-      relatoriosNatal.classList.remove('conteudo-oculto');
+    // relatorioPais.addEventListener('click', () => {
+    //   corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+    //   relatoriosPais.classList.remove('conteudo-oculto');
 
-      if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto'))){
-        relatoriosMaes.classList.add('conteudo-oculto');
-        relatoriosNamorados.classList.add('conteudo-oculto');
-        relatoriosPais.classList.add('conteudo-oculto');
-      }
-    })
+    //   if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
+    //     relatoriosMaes.classList.add('conteudo-oculto');
+    //     relatoriosNamorados.classList.add('conteudo-oculto');
+    //     relatoriosNatal.classList.add('conteudo-oculto');
+    //   }
+
+    //   if(!(relatorioPais.classList.contains('mudaCor'))){
+    //     relatorioPais.classList.add('mudaCor');
+    //     relatorioMaes.classList.remove('mudaCor');
+    //     relatorioNamorados.classList.remove('mudaCor');
+    //     relatorioNatal.classList.remove('mudaCor');
+    //   }
+    // })
+
+    // relatorioNatal.addEventListener('click', () => {
+    //   corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+    //   relatoriosNatal.classList.remove('conteudo-oculto');
+
+    //   if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto'))){
+    //     relatoriosMaes.classList.add('conteudo-oculto');
+    //     relatoriosNamorados.classList.add('conteudo-oculto');
+    //     relatoriosPais.classList.add('conteudo-oculto');
+    //   }
+
+    //   if(!(relatorioNatal.classList.contains('mudaCor'))){
+    //     relatorioNatal.classList.add('mudaCor');
+    //     relatorioMaes.classList.remove('mudaCor');
+    //     relatorioNamorados.classList.remove('mudaCor');
+    //     relatorioPais.classList.remove('mudaCor');
+    //   }
+    // })
 
     // FUNÇÕES PARA OS RELATÓRIOS
 
@@ -373,6 +472,13 @@ window.onload = () => {
         tasksPais.classList.add('conteudo-oculto');
         tasksNatal.classList.add('conteudo-oculto');
       }
+
+      if(!(taskMaes.classList.contains('mudaCor'))){
+        taskMaes.classList.add('mudaCor');
+        taskNamorados.classList.remove('mudaCor');
+        taskPais.classList.remove('mudaCor');
+        taskNatal.classList.remove('mudaCor');
+      }
     })
 
     taskNamorados.addEventListener('click', () => {
@@ -383,6 +489,13 @@ window.onload = () => {
         tasksMaes.classList.add('conteudo-oculto');
         tasksPais.classList.add('conteudo-oculto');
         tasksNatal.classList.add('conteudo-oculto');
+      }
+
+      if(!(taskNamorados.classList.contains('mudaCor'))){
+        taskNamorados.classList.add('mudaCor');
+        taskMaes.classList.remove('mudaCor');
+        taskPais.classList.remove('mudaCor');
+        taskNatal.classList.remove('mudaCor');
       }
     })
 
@@ -395,6 +508,13 @@ window.onload = () => {
         tasksNamorados.classList.add('conteudo-oculto');
         tasksNatal.classList.add('conteudo-oculto');
       }
+
+      if(!(taskPais.classList.contains('mudaCor'))){
+        taskPais.classList.add('mudaCor');
+        taskMaes.classList.remove('mudaCor');
+        taskNamorados.classList.remove('mudaCor');
+        taskNatal.classList.remove('mudaCor');
+      }
     })
 
     taskNatal.addEventListener('click', () => {
@@ -405,6 +525,81 @@ window.onload = () => {
         tasksMaes.classList.add('conteudo-oculto');
         tasksNamorados.classList.add('conteudo-oculto');
         tasksPais.classList.add('conteudo-oculto');
+      }
+
+      if(!(taskNatal.classList.contains('mudaCor'))){
+        taskNatal.classList.add('mudaCor');
+        taskMaes.classList.remove('mudaCor');
+        taskNamorados.classList.remove('mudaCor');
+        taskPais.classList.remove('mudaCor');
+      }
+    })
+
+    // FUNÇÕES PARA AS TASKS
+
+    // FUNÇÕES PARA OS TERMOS
+
+    termoCrmall.addEventListener('click', () => {
+      corpoConteudoTermo.classList.remove('conteudo-oculto');
+      termosCrmall.classList.remove('conteudo-oculto');
+
+      if(!(termosMulti.classList.contains('conteudo-oculto'))){
+        termosMulti.classList.add('conteudo-oculto');
+      }
+
+      if(!(termoCrmall.classList.contains('mudaCor'))){
+        termoCrmall.classList.add('mudaCor');
+        termoMulti.classList.remove('mudaCor');
+      }
+    })
+
+    termoMulti.addEventListener('click', () => {
+      corpoConteudoTermo.classList.remove('conteudo-oculto');
+      termosMulti.classList.remove('conteudo-oculto');
+
+      if(!(termosCrmall.classList.contains('conteudo-oculto'))){
+        termosCrmall.classList.add('conteudo-oculto');
+      }
+
+      if(!(termoMulti.classList.contains('mudaCor'))){
+        termoMulti.classList.add('mudaCor');
+        termoCrmall.classList.remove('mudaCor');
+      }
+    })
+
+    relatorioPais.addEventListener('click', () => {
+      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+      relatoriosPais.classList.remove('conteudo-oculto');
+
+      if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosNatal.classList.contains('conteudo-oculto'))){
+        relatoriosMaes.classList.add('conteudo-oculto');
+        relatoriosNamorados.classList.add('conteudo-oculto');
+        relatoriosNatal.classList.add('conteudo-oculto');
+      }
+
+      if(!(relatorioPais.classList.contains('mudaCor'))){
+        relatorioPais.classList.add('mudaCor');
+        relatorioMaes.classList.remove('mudaCor');
+        relatorioNamorados.classList.remove('mudaCor');
+        relatorioNatal.classList.remove('mudaCor');
+      }
+    })
+
+    relatorioNatal.addEventListener('click', () => {
+      corpoConteudoRelatorio.classList.remove('conteudo-oculto');
+      relatoriosNatal.classList.remove('conteudo-oculto');
+
+      if(!(relatoriosMaes.classList.contains('conteudo-oculto')) || !(relatoriosNamorados.classList.contains('conteudo-oculto')) || !(relatoriosPais.classList.contains('conteudo-oculto'))){
+        relatoriosMaes.classList.add('conteudo-oculto');
+        relatoriosNamorados.classList.add('conteudo-oculto');
+        relatoriosPais.classList.add('conteudo-oculto');
+      }
+
+      if(!(relatorioNatal.classList.contains('mudaCor'))){
+        relatorioNatal.classList.add('mudaCor');
+        relatorioMaes.classList.remove('mudaCor');
+        relatorioNamorados.classList.remove('mudaCor');
+        relatorioPais.classList.remove('mudaCor');
       }
     })
 
